@@ -15,7 +15,10 @@ class SuperheroController extends Controller
             abort(404, 'Superhero not found');
         }
 
-       
+        $view = view('superhero/show');
+        $view->superhero = $superhero;
+        return $view;
+
     }
 
 
