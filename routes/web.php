@@ -15,4 +15,11 @@ Route::get('../resources/views/selection.blade.php', function () {
     return view('selection');
 });
 
+
+Route::get('/superhero/{$superhero_slug}', 'SuperheroController@show');
+
+//Question8
+Route::get('/superhero/index', 'SuperheroController@index');
+
+
 Auth::routes();

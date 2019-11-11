@@ -7,13 +7,16 @@
     
     <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Bangers&amp;subset=latin-ext" rel="stylesheet">
     @yield('main')
-    <link rel="stylesheet" href="/sass/main.scss">
+    {{-- <link rel="stylesheet" href="/sass/main.scss"> --}}
+    <link rel="stylesheet" href="/css/main.css">
+    {{-- Laravel automatically knows to look in the public folder, so no need to include that in the path --}}
     {{-- load the stylesheet --}}
 </head>
 <body>
 
     <nav class="menu">
-        <a href="#">Home</a>
+        <a href="{{action('HomeController@index') }}"> Home </a>
+        {{-- <a href="#">Home</a> --}}
         @guest
             <a href="{{ route('login') }}">Login</a>
             <a href="{{ route('register') }}">Register</a>

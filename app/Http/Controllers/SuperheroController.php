@@ -15,8 +15,27 @@ class SuperheroController extends Controller
             abort(404, 'Superhero not found');
         }
 
-        $view = view('superhero/show');
-        $view->superhero = $superhero;
-        return $view;
+       
     }
+
+
+    public function index () {
+
+        // Question_8:
+        // $view = view('superhero/index');
+        // return $view;
+
+        // Question_11
+        $superhero_name = Superhero::orderBy('name', 'asc')->limit(5)-get();
+        // return $superhero_name;
+        $view = view('superhero/index');
+        $view->superhero = $superhero_name;
+        return $view;
+
+
+
+
+
+    }
+
 }

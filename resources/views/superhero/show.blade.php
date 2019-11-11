@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="page page-superhero">
-    <link rel="stylesheet" href="../sass/main.scss">
+    
     <section class="info">
 
         <img class="portrait" src="{{ asset('img/'.$superhero->slug.'.jpg') }}" alt="">
