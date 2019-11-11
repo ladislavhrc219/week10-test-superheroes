@@ -4,9 +4,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Avengers</title>
-
-    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Bangers&amp;subset=latin-ext" rel="stylesheet">
     
+    <link href="https://fonts.googleapis.com/css?family=Architects+Daughter|Bangers&amp;subset=latin-ext" rel="stylesheet">
+    @yield('main')
+    <link rel="stylesheet" href="/sass/main.scss">
     {{-- load the stylesheet --}}
 </head>
 <body>

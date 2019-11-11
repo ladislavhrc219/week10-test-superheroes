@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('../resources/views/selection.blade.php', function () {
+    return view('selection');
 });
 
 Auth::routes();
